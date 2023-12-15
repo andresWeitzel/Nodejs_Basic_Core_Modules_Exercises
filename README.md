@@ -1,5 +1,5 @@
 # Nodejs Basic Core Modules Exercises
-Basic nodejs core exercises with version 8.
+Basic nodejs core modules exercises.
 * [Oficial documentation](https://nodejs.org/docs/latest/api/http.html)
 
  <br>
@@ -12,7 +12,7 @@ Basic nodejs core exercises with version 8.
  <summary> See </summary>
  <br>
   
- ### HTTP
+ ### HTTP / HTTPS
 * [Make a simple request to a host.](#write-a-javascript-program-to-copy-a-string-to-an-empty-string-)
  
 <br>
@@ -25,7 +25,7 @@ Basic nodejs core exercises with version 8.
 
 <br>
 
-## HTTP
+## HTTP / HTTPS
 
 ### Make a simple request to a host [🔝](#index-)
 
