@@ -1,4 +1,4 @@
-# Nodejs_Basic_Core_Exercises
+# Nodejs Basic Core Modules Exercises
 Basic nodejs core exercises with version 8.
 * [Oficial documentation](https://nodejs.org/docs/latest/api/http.html)
 
