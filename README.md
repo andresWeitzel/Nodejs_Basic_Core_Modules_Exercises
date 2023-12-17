@@ -28,12 +28,12 @@ Basic nodejs core modules exercises.
 ## HTTP / HTTPS
 
 ### Make a simple request to a host [🔝](#index-)
-* [HTTP oficial Nodejs](https://nodejs.org/docs/latest/api/http.html#new-agentoptions)
-* [HTTP complete Guide](https://www.memberstack.com/blog/node-http-request)
-
 <details>
   <summary>See solution</summary>
  <br>
+
+* [HTTP oficial Nodejs](https://nodejs.org/docs/latest/api/http.html#new-agentoptions)
+* [HTTP complete Guide](https://www.memberstack.com/blog/node-http-request)
 
 #### Code
  ```js
