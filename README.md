@@ -37,47 +37,132 @@ Basic nodejs core modules exercises.
  <br>
 
 * [HTTP oficial Nodejs](https://nodejs.org/docs/latest/api/http.html#new-agentoptions)
+* [Guide Example](https://www.geeksforgeeks.org/how-to-make-http-requests-in-node-js/)
 
 #### Code
  ```js
 //External
-const http = require('node:http');
-//Const
-const URL = 'https://randomuser.me/api/';
-
-
-http.get(URL, (resp) => {
-  let data = '';
- // A fragment of data has been received.
- resp.on('data', (chunk) => {
-   data += chunk;
- });
- // All response has been received. Print the result.
- resp.on('end', () => {
-   console.log(JSON.parse(data).results);
- });
-
-}).on("error", (err) => {
- console.log("Error: " + err.message);
-});
+const http = require('http');
+//Const   
+// Setting the configuration for the request 
+const options = { 
+    hostname: 'jsonplaceholder.typicode.com', 
+    path: '/posts', 
+    method: 'GET'
+}; 
+    
+// Sending the request 
+const req = http.request(options, (res) => { 
+    let data = ''
+     
+    res.on('data', (chunk) => { 
+        data += chunk; 
+    }); 
+    
+    // Ending the response  
+    res.on('end', () => { 
+        console.log('Body:', JSON.parse(data)) 
+    }); 
+       
+}).on("error", (err) => { 
+    console.log("Error: ", err) 
+}).end()
 
  ```
 
 #### Console
  ```js
-gender:"male"
-name:(3) {title: "Mr", first: "Umut", last: "...}
-location:(7) {street: {...}, city: "Sinop", state...}
-email:"umut.elicin@example.com"
-login:(7) {uuid: "e5c94bb9-33a3-4c93-ab03-76a1...}
-dob:(2) {date: "1966-03-19T20:36:13.730Z", a...}
-registered:(2) {date: "2015-11-17T23:39:48.965Z", a...}
-phone:"(043)-991-7267"
-cell:"(378)-344-6626"
-id:(2) {name: "", value: null}
-picture:(3) {large: "https://randomuser.me/api/p...}
-nat:"TR"
-[[Prototype]]:{}
+{
+    userId: 9,
+    id: 89,
+    title: 'sint soluta et vel magnam aut ut sed qui',
+    body: 'repellat aut aperiam totam temporibus autem et\n' +
+      'architecto magnam ut\n' +
+      'consequatur qui cupiditate rerum quia soluta dignissimos nihil iure\n' +
+      'tempore quas est'
+  },
+  {
+    userId: 9,
+    id: 90,
+    title: 'ad iusto omnis odit dolor voluptatibus',
+    body: 'minus omnis soluta quia\n' +
+      'qui sed adipisci voluptates illum ipsam voluptatem\n' +
+      'eligendi officia ut in\n' +
+      'eos soluta similique molestias praesentium blanditiis'
+  },
+  {
+    userId: 10,
+    id: 91,
+    title: 'aut amet sed',
+    body: 'libero voluptate eveniet aperiam sed\n' +
+      'sunt placeat suscipit molestias\n' +
+      'similique fugit nam natus\n' +
+      'expedita consequatur consequatur dolores quia eos et placeat'
+  },
+  {
+    userId: 10,
+    id: 92,
+    title: 'ratione ex tenetur perferendis',
+    body: 'aut et excepturi dicta laudantium sint rerum nihil\n' +
+      'laudantium et at\n' +
+      'a neque minima officia et similique libero et\n' +
+      'commodi voluptate qui'
+  },
+  {
+    userId: 10,
+    id: 93,
+    title: 'beatae soluta recusandae',
+    body: 'dolorem quibusdam ducimus consequuntur dicta aut quo laboriosam\n' +
+      'voluptatem quis enim recusandae ut sed sunt\n' +
+      'nostrum est odit totam\n' +
+      'sit error sed sunt eveniet provident qui nulla'
+  },
+  {
+    userId: 10,
+    id: 94,
+    title: 'qui qui voluptates illo iste minima',
+    body: 'aspernatur expedita soluta quo ab ut similique\n' +
+      'expedita dolores amet\n' +
+      'sed temporibus distinctio magnam saepe deleniti\n' +
+      'omnis facilis nam ipsum natus sint similique omnis'
+  },
+  {
+    userId: 10,
+    id: 95,
+    title: 'id minus libero illum nam ad officiis',
+    body: 'earum voluptatem facere provident blanditiis velit laboriosam\n' +
+      'pariatur accusamus odio saepe\n' +
+      'cumque dolor qui a dicta ab doloribus consequatur omnis\n' +
+      'corporis cupiditate eaque assumenda ad nesciunt'
+  },
+  {
+    userId: 10,
+    id: 96,
+    title: 'quaerat velit veniam amet cupiditate aut numquam ut sequi',
+    body: 'in non odio excepturi sint eum\n' +
+      'labore voluptates vitae quia qui et\n' +
+      'inventore itaque rerum\n' +
+      'veniam non exercitationem delectus aut'
+  },
+  {
+    userId: 10,
+    id: 97,
+    title: 'quas fugiat ut perspiciatis vero provident',
+    body: 'eum non blanditiis soluta porro quibusdam voluptas\n' +
+      'vel voluptatem qui placeat dolores qui velit aut\n' +
+      'vel inventore aut cumque culpa explicabo aliquid at\n' +
+      'perspiciatis est et voluptatem dignissimos dolor itaque sit nam'
+  },
+  {
+    userId: 10,
+    id: 98,
+    title: 'laboriosam dolor voluptates',
+    body: 'doloremque ex facilis sit sint culpa\n' +
+      'soluta assumenda eligendi non ut eius\n' +
+      'sequi ducimus vel quasi\n' +
+      'veritatis est dolores'
+  },
+....
  ```
 
 <br>
