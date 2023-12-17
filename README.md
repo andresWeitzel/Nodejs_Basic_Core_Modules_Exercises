@@ -29,6 +29,44 @@ Basic nodejs core modules exercises.
 
 <br>
 
+
+## Project execution [🔝](#index-)
+
+<details>
+  <summary>See</summary>
+<br>
+
+*   Once a work environment has been created through some IDE, we clone the project
+
+```git
+git clone https://github.com/andresWeitzel/Nodejs_Basic_Core_Modules_Exercises
+```
+
+*   We position ourselves on the project
+
+```git
+cd 'projectName'
+```
+
+*   We install the latest LTS version of [Nodejs(v18)](https://nodejs.org/en/download)
+
+*   We install all the necessary packages
+
+```git
+npm i
+```
+
+* We execute the file we want and verify the result through the console
+
+```git
+node src/directory/filename.js
+```
+
+
+<br>
+
+<br>
+
 ## HTTP 
 
 ### Make a simple request to a host with http [🔝](#index-)

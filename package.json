@@ -1,0 +1,14 @@
+{
+  "name": "nodejs_basic_core_modules_exercises",
+  "version": "1.0.0",
+  "description": "Basic nodejs core modules exercises.\r * [Oficial documentation](https://nodejs.org/docs/latest/api/http.html)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "stream-http": "3.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
