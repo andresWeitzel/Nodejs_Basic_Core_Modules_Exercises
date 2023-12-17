@@ -12,8 +12,12 @@ Basic nodejs core modules exercises.
  <summary> See </summary>
  <br>
   
- ### HTTP / HTTPS
-* [Make a simple request to a host.](#write-a-javascript-program-to-copy-a-string-to-an-empty-string-)
+### HTTP
+* [Make a simple request to a host with http.](#write-a-javascript-program-to-copy-a-string-to-an-empty-string-)
+
+### HTTPS
+* [Make a simple request to a host with https.](#write-a-javascript-program-to-copy-a-string-to-an-empty-string-)
+
  
 <br>
 
@@ -25,15 +29,75 @@ Basic nodejs core modules exercises.
 
 <br>
 
-## HTTP / HTTPS
+## HTTP 
 
-### Make a simple request to a host [🔝](#index-)
+### Make a simple request to a host with http [🔝](#index-)
+<details>
+  <summary>See solution</summary>
+ <br>
+
+* [HTTP oficial Nodejs](https://nodejs.org/docs/latest/api/http.html#new-agentoptions)
+
+#### Code
+ ```js
+//External
+const http = require('node:http');
+//Const
+const URL = 'https://randomuser.me/api/';
+
+
+http.get(URL, (resp) => {
+  let data = '';
+ // A fragment of data has been received.
+ resp.on('data', (chunk) => {
+   data += chunk;
+ });
+ // All response has been received. Print the result.
+ resp.on('end', () => {
+   console.log(JSON.parse(data).results);
+ });
+
+}).on("error", (err) => {
+ console.log("Error: " + err.message);
+});
+
+ ```
+
+#### Console
+ ```js
+gender:"male"
+name:(3) {title: "Mr", first: "Umut", last: "...}
+location:(7) {street: {...}, city: "Sinop", state...}
+email:"umut.elicin@example.com"
+login:(7) {uuid: "e5c94bb9-33a3-4c93-ab03-76a1...}
+dob:(2) {date: "1966-03-19T20:36:13.730Z", a...}
+registered:(2) {date: "2015-11-17T23:39:48.965Z", a...}
+phone:"(043)-991-7267"
+cell:"(378)-344-6626"
+id:(2) {name: "", value: null}
+picture:(3) {large: "https://randomuser.me/api/p...}
+nat:"TR"
+[[Prototype]]:{}
+ ```
+
+<br>
+
+</details>
+
+<br>
+
+<br>
+
+## HTTPS 
+
+### Make a simple request to a host with https [🔝](#index-)
 <details>
   <summary>See solution</summary>
  <br>
 
 * [HTTP oficial Nodejs](https://nodejs.org/docs/latest/api/http.html#new-agentoptions)
 * [HTTP complete Guide](https://www.memberstack.com/blog/node-http-request)
+* [Other Guide](https://www.geeksforgeeks.org/https-in-node-js/)
 
 #### Code
  ```js
@@ -43,20 +107,20 @@ const https = require('https');
 const URL = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
 
 https.get(URL, (resp) => {
-  let data = '';
+ let data = '';
 
-  // A fragment of data has been received.
-  resp.on('data', (chunk) => {
-    data += chunk;
-  });
+ // A fragment of data has been received.
+ resp.on('data', (chunk) => {
+   data += chunk;
+ });
 
-  // All response has been received. Print the result.
-  resp.on('end', () => {
-    console.log(JSON.parse(data).explanation);
-  });
+ // All response has been received. Print the result.
+ resp.on('end', () => {
+   console.log(JSON.parse(data).explanation);
+ });
 
 }).on("error", (err) => {
-  console.log("Error: " + err.message);
+ console.log("Error: " + err.message);
 });
  ```
 
@@ -68,5 +132,3 @@ Asteroid 319 Leona cast a shadow across planet Earth on December 12, as it passe
 <br>
 
 </details>
-
-
