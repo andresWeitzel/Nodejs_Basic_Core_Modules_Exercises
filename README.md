@@ -13,10 +13,10 @@ Basic nodejs core modules exercises.
  <br>
   
 ### HTTP
-* [Make a simple request to a host with http.](#write-a-javascript-program-to-copy-a-string-to-an-empty-string-)
+* [Make a simple request to a host with http.](#make-a-simple-request-to-a-host-with-http-)
 
 ### HTTPS
-* [Make a simple request to a host with https.](#write-a-javascript-program-to-copy-a-string-to-an-empty-string-)
+* [Make a simple request to a host with https.](#make-a-simple-request-to-a-host-with-https-)
 
  
 <br>
