@@ -212,10 +212,6 @@ const req = http.request(options, (res) => {
 </details>
 
 
-<br>
-
-<br>
-
 ### Create a server with http [🔝](#index-)
 <details>
   <summary>See solution</summary>
