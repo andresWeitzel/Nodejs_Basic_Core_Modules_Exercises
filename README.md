@@ -1,5 +1,5 @@
 # Nodejs Basic Core Modules Exercises
-Basic nodejs core modules exercises.
+Basic nodejs core modules exercises. For example HTTP/HTTPS, Buffer, Crypto, DNS, File System, OS, V8, others.
 * [Oficial documentation](https://nodejs.org/docs/latest/api/http.html)
 
  <br>
