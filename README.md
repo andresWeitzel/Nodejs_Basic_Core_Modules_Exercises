@@ -326,3 +326,69 @@ Asteroid 319 Leona cast a shadow across planet Earth on December 12, as it passe
 <br>
 
 </details>
+
+### Create a server with https [🔝](#index-)
+<details>
+  <summary>See solution</summary>
+ <br>
+
+* [HTTPS create a server](https://www.w3schools.com/nodejs/ref_https.asp)
+
+#### Code
+ ```js
+var https = require('https');
+
+https.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.write('Hello World!');
+  res.end();
+}).listen(8080);
+ ```
+
+#### Browser
+* We enter the browser, for the url `http://localhost:8080/` and we will see a message `Hello World`
+
+#### Console
+ ```js
+<ref *2> ServerResponse {
+  _events: [Object: null prototype] { finish: [Function: bound resOnFinish] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  outputData: [],
+  outputSize: 0,
+  writable: true,
+  destroyed: false,
+  _last: false,
+  chunkedEncoding: false,
+  shouldKeepAlive: true,
+  maxRequestsOnConnectionReached: false,
+  _defaultKeepAlive: true,
+  useChunkedEncodingByDefault: true,
+  sendDate: true,
+  _removedConnection: false,
+  _removedContLen: false,
+  _removedTE: false,
+  strictContentLength: false,
+  _contentLength: null,
+  _hasBody: true,
+  _trailer: '',
+  finished: false,
+  _headerSent: false,
+  _closed: false,
+  socket: <ref *1> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _closeAfterHandlingError: false,
+    _readableState: ReadableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      buffer: BufferList { head: null, tail: null, length: 0 },
+      length: 0,
+      ......
+ ```
+
+<br>
+
+</details>
